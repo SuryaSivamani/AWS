@@ -2,14 +2,15 @@ import React, { Component } from "react";
 
 class Assign extends Component {
   state = {
-    newUser: { TotalAmount:100,Insurance: "", Mortgage: "",ChildCare: "", Grocery: ""}
+    newUser: { TotalAmount:100,Insurance: "", Mortgage: "",ChildCare: "", Grocery: "",Balance:""}
   };
   handleInsurance(e) {
     let value = e.target.value;
     this.setState(prevState => ({
       newUser: {
         ...prevState.newUser,
-        Insurance: value
+        Insurance: value,
+        Balance: this.state.newUser.TotalAmount - parseInt(value) 
       }
     }));
   }
@@ -18,7 +19,8 @@ class Assign extends Component {
     this.setState(prevState => ({
       newUser: {
         ...prevState.newUser,
-        Mortgage: value
+        Mortgage: value,
+        Balance: this.state.newUser.TotalAmount -(parseInt(value) + parseInt(this.state.newUser.Insurance))
       }
     }));
 }
@@ -28,7 +30,8 @@ handleChildCare(e) {
     this.setState(prevState => ({
       newUser: {
         ...prevState.newUser,
-        ChildCare: value
+        ChildCare: value,
+        Balance: this.state.newUser.TotalAmount -(parseInt(value) + parseInt(this.state.newUser.Insurance) + parseInt(this.state.newUser.Mortgage))
       }
     }));
 }
@@ -37,15 +40,16 @@ handleGrocery(e) {
     this.setState(prevState => ({
       newUser: {
         ...prevState.newUser,
-        Grocery: value
+        Grocery: value,
+        Balance: this.state.newUser.TotalAmount-(parseInt(value) + parseInt(this.state.newUser.Insurance) + parseInt(this.state.newUser.Mortgage) + parseInt(this.state.newUser.ChildCare)) 
       }
     }));
 }
 
 
-getTotal() {
-  return parseInt(this.state.newUser.TotalAmount)-(parseInt(this.state.newUser.Insurance) + parseInt(this.state.newUser.Mortgage) +parseInt(this.state.newUser.Grocery) +parseInt(this.state.newUser.ChildCare));
-}
+// getTotal() {
+//   return parseInt(this.state.newUser.TotalAmount)-(parseInt(this.state.newUser.Insurance) + parseInt(this.state.newUser.Mortgage) +parseInt(this.state.newUser.Grocery) +parseInt(this.state.newUser.ChildCare));
+// }
 
 render() {
   return (
@@ -55,7 +59,8 @@ render() {
         </p>
         <br>
         </br>
-        Balance: {this.getTotal()}
+        <p></p>
+        Balance: {this.state.newUser.Balance}
         <br></br>
         <label>Insurance:</label>
       <input
