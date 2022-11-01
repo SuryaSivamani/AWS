@@ -5,11 +5,15 @@ import './App.css';
 // import Inputfield from './Inputfield';
 //import Assignment1 from './Assignment1';
 import Assign from './Assign';
+import FavColor from './FavColor';
+// import FuncBudget from './FuncBudget';
 
 function App() {
   return (
     <div className="App"> 
     <Assign />  
+    {/* <FuncBudget /> */}
+    <FavColor />
       {/* <header className="App-header">
       
         <img src={logo} className="App-logo" alt="logo" /> */}
