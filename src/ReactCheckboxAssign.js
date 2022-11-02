@@ -10,7 +10,7 @@ function ReactCheckboxAssign(props) {
     ];
 
     const [hobby, setHobbies] =useState([]); // creating an empty array to store the value
-
+    console.log(hobby.length);
     const handleChange = (e)=>{
         const {value, checked} =e.target;
         if (checked) {
@@ -60,7 +60,7 @@ function ReactCheckboxAssign(props) {
           onChange={handleChange}
         /> {val.label}
       </label>)}
- 
+               
       <div>My hobbies are: {hobby.length ? hobby.join(', ') : null}</div>
    
         </div>

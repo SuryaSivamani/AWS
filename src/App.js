@@ -8,12 +8,15 @@ import './App.css';
 //import FavColor from './FavColor';
 import React, {useState} from 'react';
 import MultipleFunc from './MultipleFunc';
+//import ArrayEx from './ArrayEx';
+import ReactCheckboxAssign from './ReactCheckboxAssign';
 //import ContactManage from './ContactManage';
 //import EffectUser from './EffectUser';
 // import FuncBudget from './FuncBudget';
 
 
 function App() {
+
   /*CREATING USING A USESTATE HOOK AND ARRAY */
   // const [contacts, setContacts]=useState([]);
   // const contactManageHandler= (contact) =>{
@@ -34,7 +37,9 @@ function App() {
   // ]
   return (
     <div className="App"> 
+    {/* <ArrayEx /> */}
     <MultipleFunc />
+    <ReactCheckboxAssign />
     {/* <Assign />   */}
     {/* <FuncBudget /> */}
     {/* <FavColor contacts={contacts}/>

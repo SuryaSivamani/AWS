@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
 function MultipleFunc(props) {
-    
-    
+
+   
+
      function TopRender()
-     {
+     {  
         const Top= "Top Rendered"
         console.log(Top)
      }
@@ -25,13 +26,12 @@ function MultipleFunc(props) {
         TopRender();
         MiddleRender();
         BottomRender();
-     })
+     },[])
 
     return (
-        <div>
+            <div>
             <h2>Multiple Function</h2>
-        </div>
-    );
-}
-
+            </div>
+)        
+        }
 export default MultipleFunc;
