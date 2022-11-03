@@ -6,7 +6,8 @@ class ContactManage extends Component {
         email:""
     };
 
-    add =(e) =>{
+    
+    add =() =>{
         e.preventDefault();
         if(this.state.name === "" || this.state.email === "")
         {

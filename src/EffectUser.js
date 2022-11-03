@@ -20,4 +20,4 @@ function EffectUser(props) {
     );
 }
 
-export default EffectUser;
+export default EffectUser;${email}

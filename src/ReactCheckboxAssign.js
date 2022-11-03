@@ -12,11 +12,11 @@ function ReactCheckboxAssign(props) {
     const [hobby, setHobbies] =useState([]); // creating an empty array to store the value
     console.log(hobby.length);
     const handleChange = (e)=>{
-        const {value, checked} =e.target;
+        const {value, checked} =e.target; // Destructuring
         if (checked) {
             setHobbies(previousState  => [...previousState , value]);
           } else {
-            setHobbies(previousState  => previousState .filter(x => x !== value));
+            setHobbies(previousState  => previousState.filter(x => x !== value));
           }
     }
 

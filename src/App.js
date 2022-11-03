@@ -6,10 +6,14 @@ import './App.css';
 //import Assignment1 from './Assignment1';
 //import Assign from './Assign';
 //import FavColor from './FavColor';
-import React, {useState} from 'react';
-import MultipleFunc from './MultipleFunc';
+import React from 'react';
+// import MultipleFunc from './MultipleFunc';
 //import ArrayEx from './ArrayEx';
-import ReactCheckboxAssign from './ReactCheckboxAssign';
+// import ReactCheckboxAssign from './ReactCheckboxAssign';
+// import Ref from './Ref';
+import ReactForm from './ReactForm';
+//import ReactFormInput from './ReactFormInput';
+//import ReactFormInput from './ReactFormInput';
 //import ContactManage from './ContactManage';
 //import EffectUser from './EffectUser';
 // import FuncBudget from './FuncBudget';
@@ -38,8 +42,11 @@ function App() {
   return (
     <div className="App"> 
     {/* <ArrayEx /> */}
-    <MultipleFunc />
+    {/* <MultipleFunc />
     <ReactCheckboxAssign />
+    <Ref /> */}
+    <ReactForm />
+    {/* <ReactFormInput /> */}
     {/* <Assign />   */}
     {/* <FuncBudget /> */}
     {/* <FavColor contacts={contacts}/>
