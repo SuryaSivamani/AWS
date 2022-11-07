@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: justify;
 }
 
 .App-logo {
@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+div {
+  font-size: small;
+}
+label{
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+button{
+  padding:15px;
+  color: azure;
+  cursor: pointer;
+ outline: none;
+ background-color:forestgreen;
+ border: none;
+ border-radius: 15px;
+}
+
+.btn:hover {background-color: red}
+
+.btn:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #fff;
+    transform: translateY(4px);
+  }
+
+  table, th, td {
+    border: 1px solid;
+  }

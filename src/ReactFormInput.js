@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
 
-function ReactFormInput(props) {
-        const{name,email}=props.contact
+function ReactFormInput({val}) {
+       console.log(val)
 
     return (
+
         <div>
             <div className='item'>  
     <div className='content'>
-        
-        <div className='Header'>Hi {name}</div>
+        {val.map(values=>{
+            return <div
+                    key={values.id}>
+                    {values.name}
+            </div>
+        })}
+       
         
         
     </div>

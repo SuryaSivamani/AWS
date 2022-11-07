@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import ReactFormInput from './ReactFormInput';
+//import './TestStyle.css';
 
 function ReactForm(props) {
     const[name,setName]=useState("");
@@ -16,7 +18,7 @@ function ReactForm(props) {
             return
         }
         setVal([
-            ...val, 
+             ...val,
             {
                 id: val.length,
                 name: name,
@@ -29,15 +31,23 @@ function ReactForm(props) {
             setPassword('');
             setDob('');
             setAddress('');
+           
+     }
+    
+     const a ={
+        color:"red"
      }
 
     return (
+        <div>
+
+      
         <div className='container'>
                 <h2>Add Contact</h2>
                 <form className='form' onSubmit={add}>
                     <div className='field'>
                     <label>Name</label>
-                    <input type="text" placeholder='Enter the name' name="name" 
+                    <input style={a} type="text" placeholder='Enter the name' name="name" 
                     value= {name} 
                     onChange={(e)=> setName(e.target.value)}></input>
                     </div>
@@ -76,8 +86,12 @@ function ReactForm(props) {
                        </label></div>
                        
                          ))}
+                        
                       
                     
+            </div>
+            
+            /* <ReactFormInput val={val}/> */
             </div>
     );
 }
